@@ -1,0 +1,168 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 4em 1em;
+    text-align: center;
+}
+
+section:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+#hero {
+    background: url('assiment1.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 10em 1em;
+}
+
+#hero h1 {
+    font-size: 3em;
+}
+
+#hero p {
+    font-size: 1.5em;
+}
+
+#metrics .metrics-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.metric {
+    width: 20%;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.metric img {
+    width: 50px;
+    height: 50px;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 1em auto;
+    max-width: 600px;
+    text-align: left;
+    padding: 1em;
+    border-left: 5px solid #333;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.tablink {
+    background-color: #ddd;
+    border: none;
+    padding: 1em;
+    margin: 0 0.5em;
+    cursor: pointer;
+}
+
+.tablink.active {
+    background-color: #333;
+    color: white;
+}
+
+.tabcontent {
+    display: none;
+    padding: 2em 0;
+}
+
+#cta {
+    background-color: #333;
+    color: white;
+    padding: 4em 1em;
+}
+
+#cta button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 1em 2em;
+    cursor: pointer;
+}
+#pro{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+.child {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 30%;
+    text-align: center;
+    margin: 1em 0;
+}
+/* i{
+    width: 10px;
+    height: 510px;
+    color:black;
+} */
+ 
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    section {
+        padding: 2em 1em;
+    }
+
+    .metric {
+        width: 45%;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tablink {
+        margin: 0.5em 0;
+    }
+}
+nav a:hover{
+    color: rgb(90, 95, 95);
+} 

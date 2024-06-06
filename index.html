@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page - Crest</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <h3>CleverBooks</h3>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#problems">Problems Solved</a></li>
+                <li><a href="#metrics">Key Metrics</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#cta">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Innovation & Creativity at Crest</h1>
+        <p>Revolutionizing Inventory Management with Cutting-edge Solutions</p>
+    </section>
+
+    <!-- Key Problems Solved Section -->
+    <section id="problems">
+        <h2>Key Problems Solved</h2>
+        <ul id="pro">
+            
+            <div class="child">
+                <p> overstack and stockouts </p>
+            </div>
+            
+            <div  class="child">
+            <p>Manual inventory tracking errors</p>
+            </div>
+
+             <div  class="child">
+            <p>Poor demand forecasting</p>
+             </div>
+
+               <div  class="child">
+            <p>Inadequate inventory optimization</p>
+               </div>
+        </ul>
+    </section>
+
+    <!-- Key Metrics Section -->
+    <section id="metrics">
+        <h2>Why Choose Crest?</h2>
+        <div class="metrics-container">
+            <div class="metric">
+                <img src="uptime.png" alt="Metric 1">
+                <p>99.9% Uptime</p>
+            </div>
+            <div class="metric">
+                <img src="suport.png" alt="Metric 2">
+                <p>24/7 Support</p>
+            </div>
+            <div class="metric">
+                <img src="analytics.png" alt="Metric 3">
+                <p>Real-time Analytics</p>
+            </div>
+            <div class="metric">
+                <img src="content-suggestions.png" alt="Metric 4">
+                <p>AI-driven Insights</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <h2>What Our Clients Say</h2>
+        <blockquote>
+            <p>"Crest has transformed our inventory management, making our operations smoother and more efficient!" - Jane Doe</p>
+        </blockquote>
+        <blockquote>
+            <p>"With Crest, we reduced stockouts by 80%! Highly recommend." - John Smith</p>
+        </blockquote>
+    </section>
+
+    <!-- Problem Target Section -->
+    <section id="features">
+        <h2>Features</h2>
+        <div class="tabs">
+            <button class="tablink" onclick="openFeature(event, 'feature1')">Feature 1</button>
+            <button class="tablink" onclick="openFeature(event, 'feature2')">Feature 2</button>
+            <button class="tablink" onclick="openFeature(event, 'feature3')">Feature 3</button>
+        </div>
+        
+        <div id="feature1" class="tabcontent">
+            <h3>Feature 1</h3>
+            <p>Detail about Feature 1.</p>
+        </div>
+        
+        <div id="feature2" class="tabcontent">
+            <h3>Feature 2</h3>
+            <p>Detail about Feature 2.</p>
+        </div>
+        
+        <div id="feature3" class="tabcontent">
+            <h3>Feature 3</h3>
+            <p>Detail about Feature 3.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta">
+        <h2>Grow Faster Than You Think</h2>
+        <p>Join Crest today and revolutionize your inventory management.</p>
+        <button onclick="location.href='#sign-up'" style="padding:1em 2em;">Sign Up Now</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Crest. All rights reserved.</p>
+        <p>Crest Inc, 123 Innovation Drive, Tech City, TC 12345</p>
+    </footer>
+
+    <script>
+    function openFeature(evt, featureName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(featureName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+</body>
+</html>
